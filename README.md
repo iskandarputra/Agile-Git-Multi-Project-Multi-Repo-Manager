@@ -1,6 +1,6 @@
 # 🤖 Auto Script Repo Manager
 
-This comprehensive Bash script is engineered to streamline the management of multiple Git repositories. It offers an array of functionalities for project switching, status checks, updates, TODO list management, and more.
+This comprehensive Bash script is engineered to streamline the management of `multiple Git repositories`. It offers an array of functionalities for project switching, status checks, updates, TODO list management, and more.
 
 ## 🌟 Overview
 
@@ -22,7 +22,7 @@ This comprehensive Bash script is engineered to streamline the management of mul
 
 ### Prerequisites
 
-- Git is required for using this script.
+- `Git` is required for using this script.
 
 ### Steps
 
@@ -31,12 +31,12 @@ This comprehensive Bash script is engineered to streamline the management of mul
    ```bash
    git clone https://github.com/your-username/auto-script-repo-manager.git
    ```
-2. **Add the following line to your ~/.bashrc or ~/.zshrc**:
+2. **Add the following line to your `~/.bashrc` or `~/.zshrc`**:
 
    ```bash
     source "/path/to/autoscript_repo_manager.sh"
    ```
-   Remember to execute source ~/.bashrc or source ~/.zshrc after making changes.
+   Remember to execute `source ~/.bashrc` or `source ~/.zshrc` after making changes.
 
 ## 👨‍💻 Usage
 
@@ -76,30 +76,62 @@ Tailor the script to your needs:
 - **Repository Cloning**: Add more repositories to manage.
 - **Functionality Enhancement**: Extend functionality to suit specific requirements.
 
-### Projects Configuration & Repository Management
+###  📝 Projects Configuration & Repository Management
 Adjust project names and their associated directories to align with your project structure. Add or remove projects as needed:
 
 ```bash
 # Modify project names and directories
-projects=("Project1" "Project2" "Project3")
-AUTOSCRIPT_DIR="$HOME/Documents/autoscript"
-WORK_DIR="$HOME/Documents/work/"
+projects=("PERSONAL" "PROJECT_1" "PROJECT_2")
+PERSONAL_DIR="$HOME/Documents/personal_workspace"
+WORK_DIR="$HOME/Documents/workspace"
 
 # Define configurations for each project
 project_1_config() {
-    export rp1=$AUTOSCRIPT_DIR/projects/Project1
-    export rp2=$AUTOSCRIPT_DIR/projects/Project2
-    # Add more repositories for Project1 configuration
+    local PROJECT_DIR=$PERSONAL_DIR
+    setup_project_config "$PROJECT_DIR" \
+        "project_autoscript/repo_1/repos_management" \
+        "project_autoscript/repo_2/repos_management" \
+        "project_autoscript/repo_3/repos_management"
 }
 
 project_2_config() {
-    export rp1=$WORK_DIR/Project2
-    export rp2=$WORK_DIR/AnotherProject2
-    # Add more repositories for Project2 configuration
+    local PROJECT_DIR=$WORK_DIR
+    setup_project_config "$PROJECT_DIR" \
+        "project_1/repo_1_folder/your_git_repo" \
+        "project_1/repo_2_folder/your_git_repo" \
+        "project_1/repo_3_folder/your_git_repo" \
+        "project_1/repo_4_folder/your_git_repo" \
+        "project_1/repo_5_folder/your_git_repo" \
+        "project_1/repo_6_folder/your_git_repo" \
+        "project_1/repo_7_folder/your_git_repo"
 }
 
 # Add more project configurations as required
 ```
+###  📝 Sample Directory Structure and Repository Cloning
+
+To set up a directory structure and clone a Git repository within your defined project structure, follow these steps:
+
+```bash
+# Create the directory structure
+cd Documents && mkdir -p workspace/project_1/repo_1_folder
+cd workspace/project_1/repo_1_folder
+
+# Clone your Git repository
+git clone <YOUR_GIT_REPO_URL>
+```
+This sequence of commands demonstrates how to create the necessary directory structure for a repository within the `project_1` directory and clone a Git repository into the `repo_1_folder`. Replace `<YOUR_GIT_REPO_URL>` with the actual URL of the Git repository you intend to clone.
+
+Resulting `Tree` Structure:
+
+```bash
+Documents/
+└── workspace
+    └── project_1
+        └── repo_1_folder
+            └── [contents of your cloned Git repository]
+```
+Adjust the commands and structure as per your project requirements and repository locations.
 
 ## 🤝 Contribution
 Contributions, suggestions, or bug reports are welcome! Feel free to open issues or pull requests.
