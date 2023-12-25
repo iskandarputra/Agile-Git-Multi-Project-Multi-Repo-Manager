@@ -1,4 +1,4 @@
-# 🤖 Auto Script Repo Manager
+# 🤖 Agile Git Multi-Project Multi-Repo (GIT-MPMR) Manager
 
 This comprehensive Bash script is engineered to streamline the management of `multiple Git repositories`. It offers an array of functionalities for project switching, status checks, updates, TODO list management, and more.
 
