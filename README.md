@@ -29,7 +29,7 @@ This comprehensive Bash script is engineered to streamline the management of `mu
 1. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/your-username/auto-script-repo-manager.git
+   git clone https://github.com/iskandarputra/autoscript_repo_manager.git
    ```
 2. **Add the following line to your `~/.bashrc` or `~/.zshrc`**:
 
