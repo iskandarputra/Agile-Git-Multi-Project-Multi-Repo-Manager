@@ -135,3 +135,62 @@ Adjust the commands and structure as per your project requirements and repositor
 
 ## 🤝 Contribution
 Contributions, suggestions, or bug reports are welcome! Feel free to open issues or pull requests.
+
+## 🤝 Usage Example
+
+### 📝 Project Switch
+Here, the script demonstrates managing three example Git projects: `Personal`, `Work`, and `Sidehustle`.
+![Alt Text](resources/img/1.png)
+
+### 📝 Check Repository Status
+
+Select a project (e.g., `Personal` by inputting 1) and proceed with `repocheck` to view the status of all cloned repositories.
+
+![Alt Text](resources/img/2.png)
+
+### 📝 Update TODO & Priority
+
+Navigate to a repository using numbered aliases `(e.g., 1-, 2-, 3-)`. If no `todo.txt` is detected, a new file is created, prompting you to enter a TODO list and its priority. Afterward, use `repocheck` to review the updated status.
+
+![Alt Text](resources/img/3.png)
+
+### 📝 Workflow
+
+Standard Git workflow involves navigating to your working repository directory, creating a new `branch`, `checkout` to the new branch, making changes, `committing`, and `pushing` to the remote repository.
+
+![Alt Text](resources/img/4.png)
+
+### 📝 Check Cloned Repositories' Status
+After checking out a branch (e.g., `feature/app`), utilize `repocheck` to inspect the status of all cloned repositories.
+
+![Alt Text](resources/img/5.png)
+
+
+### 📝 Workflow Without Commit & Push
+Add a TODO list and a priority in the cloned repository directory, create a new branch, make changes, and use `repocheck` to inspect the status. Uncommitted work in clonerepo2 is displayed due to pending commits.
+
+![Alt Text](resources/img/6.png)
+
+### 📝 Update All Cloned Repositories
+Execute `repoupdate` to automatically fetch and pull changes from all cloned repositories. Certain conditions may prevent updates, as depicted below.
+
+![Alt Text](resources/img/7.png)
+
+
+### 📝 Delete TODO List
+
+Remove or delete a TODO list using the `todoreset` command.
+
+
+
+![Alt Text](resources/img/8.png)
+
+### 📝 To Comfirmed TODO List Removed
+You can use `repocheck` to check the status wheter the TODO list that we have delete just now still apear or not.
+![Alt Text](resources/img/9.png)
+
+### TIME UP! Need Go To Work!
+
+time to continue my work. then I just need to use `projectswith` to switch the cloned repo to the `Work` project. easy, right?
+
+![Alt Text](resources/img/10.png)
